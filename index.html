@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NUMA - Nurses Medical Application | Empowering Healthcare Professionals</title>
-    <meta name="description" content="Exam preparation platform for nurses: NMCN, UK NMC CBT, NCLEX-RN prep with AI-powered study tools. Built from insights of 500+ Nigerian nurses.">
+    <title>NUMA AI - Empowering Nurses with Smart Care</title>
+    <meta name="description" content="NUMA AI empowers African nurses with a smart companion for care, training, and teamwork, featuring voice technology.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.ibb.co/3mfB27TT/icon-512x512.png">
@@ -20,7 +20,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* NUMA Healthcare Platform - Enhanced Design System with Glassmorphism */
         :root {
             --numa-blue: #2563eb;
             --numa-blue-light: #3b82f6;
@@ -88,21 +87,6 @@
             background-position: center;
         }
         
-        .coming-soon {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
-        }
-        
         .available-badge {
             position: absolute;
             top: 1rem;
@@ -118,7 +102,6 @@
             box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
         }
         
-        /* Enhanced icon styles with better color matching */
         .icon {
             display: inline-block;
             width: 1.5rem;
@@ -134,7 +117,6 @@
             font-size: 1.25rem;
         }
         
-        /* Floating animations */
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -144,7 +126,6 @@
             animation: float 3s ease-in-out infinite;
         }
         
-        /* Gradient text animations */
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -160,16 +141,10 @@
             -webkit-text-fill-color: transparent;
         }
         
-        /* Tanned background variations */
         .bg-tanned {
             background: linear-gradient(135deg, #fef7ed 0%, #fef3c7 100%);
         }
         
-        .bg-tanned-light {
-            background: linear-gradient(135deg, #fffbeb 0%, #fef7ed 100%);
-        }
-        
-        /* Enhanced stats section */
         .stats-card {
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(16px);
@@ -190,23 +165,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA Logo" class="w-10 h-10 rounded-xl float-animation">
-                    <div class="font-bold text-xl animated-gradient">
-                        NUMA
-                    </div>
+                    <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-10 h-10 rounded-xl float-animation">
+                    <div class="font-bold text-xl animated-gradient">NUMA AI</div>
                 </div>
-                
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">Features</a>
                     <a href="#about" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">About</a>
                     <a href="#contact" class="text-slate-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
                 </div>
-                
                 <button class="md:hidden text-slate-700" onclick="toggleMenu()">☰</button>
             </div>
         </div>
-        
-        <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-effect border-t">
             <div class="px-4 py-4 space-y-3">
                 <a href="#features" class="block text-slate-700 hover:text-blue-600 font-medium transition-colors" onclick="toggleMenu()">Features</a>
@@ -220,58 +189,19 @@
     <section class="min-h-screen hero-bg flex items-center pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="text-center space-y-8">
-                <div class="inline-flex items-center gap-2 px-6 py-3 glass-effect rounded-full text-sm font-medium text-slate-700">
-                    <span class="icon">❤️</span>
-                    <span>Built by Nurses, for Nurses</span>
-                </div>
-                
                 <h1 class="text-5xl md:text-7xl font-bold">
-                    <span class="animated-gradient">
-                        Excel in Your
-                    </span>
-                    <span class="block mt-4 animated-gradient">
-                        Nursing Journey
-                    </span>
+                    <span class="animated-gradient">Care Smarter with</span>
+                    <span class="block mt-4 animated-gradient">NUMA AI</span>
                 </h1>
-                
                 <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                    Master NMCN, UK NMC CBT, and NCLEX-RN exams with our comprehensive question banks 
-                    and study tools built from insights of 500+ Nigerian nurses.
+                    NUMA AI is your smart companion, helping nurses with training, patient care, and teamwork using voice technology.
                 </p>
-                
                 <div class="pt-8">
                     <a href="https://app.numa.ng" class="inline-flex items-center gap-3 numa-gradient text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
                         <span class="icon">⚡</span>
-                        Start Your Journey Today
+                        Start Your Journey
                         <span class="icon">→</span>
                     </a>
-                </div>
-                
-                <div class="pt-8 text-center">
-                    <div class="inline-flex items-center space-x-2 text-blue-600 glass-effect px-4 py-2 rounded-full">
-                        <span class="icon">👥</span>
-                        <span class="font-medium">500+ nurses contributed to building NUMA</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="py-16 bg-tanned-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
-                <div class="stats-card p-6 space-y-3">
-                    <div class="text-4xl font-bold animated-gradient">500+</div>
-                    <p class="text-slate-600 font-medium">Nurses Surveyed</p>
-                </div>
-                <div class="stats-card p-6 space-y-3">
-                    <div class="text-4xl font-bold animated-gradient">5000+</div>
-                    <p class="text-slate-600 font-medium">Practice Questions</p>
-                </div>
-                <div class="stats-card p-6 space-y-3 md:col-span-1 col-span-2">
-                    <div class="text-4xl font-bold animated-gradient">5+</div>
-                    <p class="text-slate-600 font-medium">Exam Types Covered</p>
                 </div>
             </div>
         </div>
@@ -282,167 +212,80 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-6 mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold">
-                    <span class="text-slate-800">Everything You Need to</span>
-                    <span class="block mt-2 animated-gradient">
-                        Succeed as a Nurse
-                    </span>
+                    <span class="text-slate-800">Your All-in-One</span>
+                    <span class="block mt-2 animated-gradient">Nursing Solution</span>
                 </h2>
                 <p class="text-slate-600 max-w-3xl mx-auto text-lg leading-relaxed">
-                    Starting with comprehensive exam preparation, with more tools available 
-                    to support your entire nursing career.
+                    NUMA AI supports your career with smart tools for learning, care, and teamwork.
                 </p>
             </div>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Exam Preparation - Primary Feature -->
                 <div class="numa-card p-8 text-center">
                     <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                         <span class="icon-lg text-white">📚</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Exam Preparation</h3>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Learn with Ease</h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        Comprehensive question banks for NMCN, UK NMC CBT Parts A & B, and NCLEX-RN 
-                        with detailed explanations and progress tracking.
+                        Access training with guided lessons and care tips to grow your skills.
                     </p>
                     <div class="space-y-2 text-sm text-blue-600">
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>5000+ Practice Questions</span>
+                            <span>Guided Training</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Detailed Explanations</span>
+                            <span>Drug Info</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Progress Analytics</span>
+                            <span>Care Tips</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Medical Calculators -->
                 <div class="numa-card p-8 text-center">
                     <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="icon-lg text-white">🧮</span>
+                        <span class="icon-lg text-white">👥</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Medical Calculators</h3>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Manage Care</h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        Essential medical calculators and reference tools for accurate clinical decision-making and patient care.
+                        Track patient details and get reminders with voice assistance.
                     </p>
                     <div class="space-y-2 text-sm text-emerald-600">
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Dosage Calculators</span>
+                            <span>Patient Tracking</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Vital Signs Tools</span>
+                            <span>Drug Reminders</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Clinical References</span>
+                            <span>Voice Support</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- AI Clinical Support -->
                 <div class="numa-card p-8 text-center">
                     <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="icon-lg text-white">🤖</span>
+                        <span class="icon-lg text-white">🤝</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">AI Clinical Support</h3>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Team Together</h3>
                     <p class="text-slate-600 leading-relaxed mb-6">
-                        Get answers to clinical questions and assistance with record updates 
-                        through our AI-powered support system.
+                        Coordinate shifts and share updates with your team.
                     </p>
                     <div class="space-y-2 text-sm text-purple-600">
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Clinical Q&A</span>
+                            <span>Shift Planning</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Record Updates</span>
+                            <span>Team Updates</span>
                         </div>
                         <div class="flex items-center justify-center space-x-2">
                             <span class="icon">✓</span>
-                            <span>Study Insights</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Patient Management -->
-                <div class="numa-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="icon-lg text-white">👥</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Patient Management</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Digital patient records and care coordination tools with AI assistance 
-                        for efficient healthcare delivery.
-                    </p>
-                    <div class="space-y-2 text-sm text-teal-600">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Digital Records</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>AI Record Updates</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Care Reminders</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Drug Reference -->
-                <div class="numa-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="icon-lg text-white">💊</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Drug Reference</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Comprehensive medication database with dosages, interactions, and administration guidelines.
-                    </p>
-                    <div class="space-y-2 text-sm text-red-600">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Medication Database</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Drug Interactions</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Administration Guides</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NANDA Guidelines -->
-                <div class="numa-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                        <span class="icon-lg text-white">📖</span>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-800 mb-4">NANDA Guidelines</h3>
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Complete NANDA nursing diagnoses and care planning resources at your fingertips.
-                    </p>
-                    <div class="space-y-2 text-sm text-indigo-600">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Nursing Diagnoses</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Care Planning</span>
-                        </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
-                            <span>Quick Reference</span>
+                            <span>Handover Support</span>
                         </div>
                     </div>
                 </div>
@@ -450,48 +293,44 @@
         </div>
     </section>
 
-    <!-- Why NUMA Section -->
+    <!-- Why NUMA AI Section -->
     <section class="py-20 numa-gradient text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/10"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center space-y-8 mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold">
-                    Why Nurses Choose NUMA
+                    Why Nurses Love NUMA AI
                 </h2>
                 <p class="text-blue-100 max-w-3xl mx-auto text-lg leading-relaxed">
-                    Built from real insights gathered from over 500 registered nurses 
-                    and nursing students across Nigeria and Africa.
+                    Built with insights from nurses across Africa to meet real needs.
                 </p>
             </div>
-
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center space-y-6 glass-effect p-8 rounded-2xl">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
                         <span class="icon-lg text-white">📊</span>
                     </div>
-                    <h3 class="text-2xl font-bold">Survey-Driven Development</h3>
+                    <h3 class="text-2xl font-bold">Real Nurse Insights</h3>
                     <p class="text-blue-100 leading-relaxed">
-                        Every feature is built from insights gathered from 500+ nurses. Development decisions are backed by real user needs and feedback.
+                        Shaped by nurses to solve daily challenges.
                     </p>
                 </div>
-
                 <div class="text-center space-y-6 glass-effect p-8 rounded-2xl">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
                         <span class="icon-lg text-white">🌍</span>
                     </div>
-                    <h3 class="text-2xl font-bold">African-Focused</h3>
+                    <h3 class="text-2xl font-bold">Africa-Focused</h3>
                     <p class="text-blue-100 leading-relaxed">
-                        Designed specifically for Nigerian and African healthcare systems, regulations, and nursing certification requirements.
+                        Tailored for African healthcare systems and nurses.
                     </p>
                 </div>
-
                 <div class="text-center space-y-6 glass-effect p-8 rounded-2xl">
                     <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
                         <span class="icon-lg text-white">❤️</span>
                     </div>
-                    <h3 class="text-2xl font-bold">By Nurses, For Nurses</h3>
+                    <h3 class="text-2xl font-bold">Nurse-Led</h3>
                     <p class="text-blue-100 leading-relaxed">
-                        Created by healthcare professionals who understand the daily challenges and certification requirements of nursing practice.
+                        Created by nurses who get your world.
                     </p>
                 </div>
             </div>
@@ -506,54 +345,43 @@
                     <div class="space-y-6">
                         <h2 class="text-4xl md:text-5xl font-bold">
                             <span class="text-slate-800">About</span>
-                            <span class="block mt-2 animated-gradient">
-                                NUMA
-                            </span>
+                            <span class="block mt-2 animated-gradient">NUMA AI</span>
                         </h2>
                         <p class="text-xl text-slate-700 leading-relaxed">
-                            NUMA (Nurses Medical Application) is a product of <strong>NurseBridge Network</strong>, Nigeria. 
+                            NUMA AI, a product of <strong>NurseBridge Network</strong> in Nigeria, is transforming nursing with smart technology.
                         </p>
                         <p class="text-slate-600 leading-relaxed">
-                            We are dedicated to enhancing the quality of care nurses deliver and improving their quality of life. As nurses ourselves, we are committed to empowering our peers. We create tailored events, programs, and courses for Nigerian and African nurses, while also developing digital tools to advance and modernize nursing practice.
+                            Led by nurses, we’re dedicated to easing your workload and improving care quality across Africa.
                         </p>
                         <p class="text-slate-600 leading-relaxed">
-                            Powered by the <strong>AFIX (Africa Future Innovation eXchange)</strong> initiative, 
-                            which also powers other AFIX brands targeted at improving quality of life in Africa.
+                            Powered by the <strong>AFIX (Africa Future Innovation eXchange)</strong> initiative, supporting better lives in Africa.
                         </p>
                     </div>
-
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4">
                             <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
                                 <span class="text-white text-sm">✓</span>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">Comprehensive exam preparation for Nigerian and international certifications</span>
+                            <span class="text-slate-600 leading-relaxed">Smart training and care tools</span>
                         </div>
                         <div class="flex items-start space-x-4">
                             <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
                                 <span class="text-white text-sm">✓</span>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">Medical calculators and clinical decision-making tools available now</span>
+                            <span class="text-slate-600 leading-relaxed">Voice technology for hands-free use</span>
                         </div>
                         <div class="flex items-start space-x-4">
                             <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
                                 <span class="text-white text-sm">✓</span>
                             </div>
-                            <span class="text-slate-600 leading-relaxed">AI assistance for clinical questions and record management (coming soon)</span>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
-                                <span class="text-white text-sm">✓</span>
-                            </div>
-                            <span class="text-slate-600 leading-relaxed">Community-driven development based on real nurse feedback</span>
+                            <span class="text-slate-600 leading-relaxed">Teamwork made simple</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="glass-effect rounded-3xl p-12 text-center min-h-96 flex items-center justify-center">
                     <div class="max-w-md">
-                        <h3 class="text-3xl font-bold mb-6 text-slate-800">Serving Nursing Professionals Across Africa</h3>
-                        <p class="text-slate-600 leading-relaxed">NUMA is designed specifically for the unique challenges and opportunities in African healthcare systems.</p>
+                        <h3 class="text-3xl font-bold mb-6 text-slate-800">Supporting Nurses Across Africa</h3>
+                        <p class="text-slate-600 leading-relaxed">NUMA AI is built for the unique needs of African nurses.</p>
                     </div>
                 </div>
             </div>
@@ -566,27 +394,24 @@
         <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="space-y-8">
                 <h3 class="text-4xl md:text-5xl font-bold">
-                    Ready to Transform Your
-                    <span class="block mt-2 text-blue-100">Nursing Practice?</span>
+                    Ready to Work Smarter?
+                    <span class="block mt-2 text-blue-100">Join NUMA AI Today</span>
                 </h3>
                 <p class="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto">
-                    Start with comprehensive exam preparation and medical calculators, then join our growing community of nurses 
-                    as we build more tools together.
+                    Start with free tools to ease your day and grow with our community.
                 </p>
             </div>
-
             <div class="pt-8">
                 <a href="https://app.numa.ng" class="inline-flex items-center gap-3 bg-white/20 backdrop-blur-lg border border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl hover:bg-white/30 transform hover:-translate-y-2 transition-all duration-300">
                     <span class="icon">🚀</span>
-                    Get Started with NUMA
+                    Get Started
                     <span class="icon">→</span>
                 </a>
             </div>
-
             <div class="pt-8 text-center">
                 <div class="inline-flex items-center space-x-2 text-blue-100 glass-effect px-6 py-3 rounded-full">
                     <span class="icon">🛡️</span>
-                    <span>Free to start • No credit card required</span>
+                    <span>Free to Start • No Card Needed</span>
                 </div>
             </div>
         </div>
@@ -597,16 +422,15 @@
         <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
                 <div class="space-y-6 lg:col-span-1">
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA Logo" class="w-12 h-12 rounded-xl float-animation">
-                        <div class="font-bold text-2xl animated-gradient">NUMA</div>
+                        <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-12 h-12 rounded-xl float-animation">
+                        <div class="font-bold text-2xl animated-gradient">NUMA AI</div>
                     </div>
                     <div class="space-y-4">
                         <p class="text-slate-300 leading-relaxed text-sm">
-                            <strong>NUMA</strong><br>
-                            Nurses Medical Application - Empowering healthcare professionals with modern tools for exceptional patient care.
+                            <strong>NUMA AI</strong><br>
+                            Your smart companion for nursing care and growth.
                         </p>
                         <p class="text-slate-300 text-sm">
                             A product of <span class="text-blue-400 font-medium">NurseBridge Network</span>
@@ -614,30 +438,24 @@
                         <p class="text-slate-300 text-sm">An AFIX initiative</p>
                     </div>
                 </div>
-
-                <!-- Platform Features -->
                 <div class="space-y-4">
                     <h4 class="font-semibold text-lg text-white">Platform Features</h4>
                     <div class="space-y-3 text-sm">
-                        <div class="text-slate-300">• Patient Management</div>
-                        <div class="text-slate-300">• Vital Signs Monitoring</div>
-                        <div class="text-slate-300">• Medical Calculators</div>
-                        <div class="text-slate-300">• HIPAA Compliance</div>
+                        <div class="text-slate-300">• Patient Care</div>
+                        <div class="text-slate-300">• Team Coordination</div>
+                        <div class="text-slate-300">• Voice Assistance</div>
+                        <div class="text-slate-300">• Training Hub</div>
                     </div>
                 </div>
-
-                <!-- Quick Links -->
                 <div class="space-y-4">
                     <h4 class="font-semibold text-lg text-white">Quick Links</h4>
                     <div class="space-y-3 text-sm">
-                        <a href="#features" class="block text-slate-300 hover:text-blue-400 transition-colors">• Clinical Exams</a>
-                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• Medical Calculators</a>
-                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• User Profile</a>
-                        <a href="#contact" class="block text-slate-300 hover:text-blue-400 transition-colors">• Support Center</a>
+                        <a href="#features" class="block text-slate-300 hover:text-blue-400 transition-colors">• Learn More</a>
+                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• Get Started</a>
+                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• User Support</a>
+                        <a href="#contact" class="block text-slate-300 hover:text-blue-400 transition-colors">• Contact Us</a>
                     </div>
                 </div>
-
-                <!-- Get in Touch -->
                 <div class="space-y-4">
                     <h4 class="font-semibold text-lg text-white">Get in Touch</h4>
                     <div class="space-y-3 text-sm">
@@ -652,15 +470,8 @@
                             <span class="ml-6">Lagos, Nigeria</span>
                         </div>
                     </div>
-                    
-                    <!-- Social Media Links -->
                     <div class="pt-4">
-                        <div class="flex space-x-4">
-
-
-
-
-<xaiArtifact artifact_id="3328470c-cbaa-42b6-9b82-4921f3de0282" artifact_version_id="53619acd-808b-4751-acf9-2afc544b06b4" title="social_media_icons.html" contentType="text/html">
+                        <xaiArtifact artifact_id="b5d0953f-e941-4a4e-b8bb-d13ea0379419" artifact_version_id="aaf1b6c8-4bde-4242-ac46-1820fc61408f" title="social_media_icons.html" contentType="text/html">
 <div class="flex space-x-4">
     <a href="https://web.facebook.com/profile.php?id=61576980956427" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#1764c0] to-[#2d5384] hover:from-[#1a73d9] hover:to-[#3768a4] transition-all">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13.1.0/icons/facebook.svg" alt="Facebook" class="w-5 h-5" style="color: #f0f9ff;">
@@ -672,123 +483,3 @@
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13.1.0/icons/linkedin.svg" alt="LinkedIn" class="w-5 h-5" style="color: #f0f9ff;">
     </a>
 </div>
-</xaiArtifact>
-
-
-
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="border-t border-slate-700 mt-12 pt-8 text-center">
-                <p class="text-slate-400 text-sm">
-                    © 2025 NUMA - Nurses Medical Application. All rights reserved.<br>
-                    <xaiArtifact artifact_id="c0af8c3d-4e3a-4616-826c-2276477329df" artifact_version_id="cfc4ff83-5b51-47e0-b4de-a5b62edce285" title="footer_link.html" contentType="text/html">
-<span class="mt-2 inline-block">
-    Created with ❤️ by 
-    <a href="https://linkai.afix.club" target="_blank" class="text-blue-400 font-medium hover:text-blue-300 transition-colors">LinkAI</a>
-</span>
-</xaiArtifact>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Enhanced Intersection Observer for staggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0) scale(1)';
-                    }, index * 100);
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation with enhanced effects
-        document.querySelectorAll('.numa-card').forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px) scale(0.95)';
-            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(card);
-        });
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-bg');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-            }
-        });
-
-        // Add floating animation delay to various elements
-        document.querySelectorAll('.float-animation').forEach((element, index) => {
-            element.style.animationDelay = `${index * 0.5}s`;
-        });
-
-        // Enhanced glass morphism effects on scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const nav = document.querySelector('.glass-nav');
-            
-            if (scrolled > 100) {
-                nav.style.background = 'rgba(248, 250, 252, 0.95)';
-                nav.style.backdropFilter = 'blur(24px)';
-            } else {
-                nav.style.background = 'rgba(248, 250, 252, 0.85)';
-                nav.style.backdropFilter = 'blur(20px)';
-            }
-        });
-
-        // Add hover effects for cards
-        document.querySelectorAll('.numa-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
