@@ -17,7 +17,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Your Design System CSS -->
     <link rel="stylesheet" href="index.css">
@@ -26,6 +26,120 @@
         body {
             font-family: 'Inter', system-ui, sans-serif;
             scroll-behavior: smooth;
+        }
+        
+        /* Enhanced glassmorphism for landing page */
+        .landing-glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+        }
+        
+        .landing-feature-card {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 
+                0 8px 24px rgba(0, 0, 0, 0.08),
+                0 2px 8px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .landing-feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 
+                0 20px 40px rgba(37, 99, 235, 0.12),
+                0 8px 16px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            border-color: rgba(37, 99, 235, 0.2);
+        }
+        
+        .landing-glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 12px 32px rgba(0, 0, 0, 0.12),
+                0 4px 12px rgba(0, 0, 0, 0.06),
+                inset 0 1px 2px rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Enhanced button styling */
+        .landing-cta-button {
+            background: linear-gradient(135deg, hsl(207 64% 45%) 0%, hsl(207 64% 38%) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 0.875rem;
+            box-shadow: 
+                0 8px 20px rgba(37, 99, 235, 0.35),
+                0 2px 8px rgba(37, 99, 235, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .landing-cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 16px 32px rgba(37, 99, 235, 0.4),
+                0 6px 16px rgba(37, 99, 235, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, hsl(207 64% 48%) 0%, hsl(207 64% 41%) 100%);
+        }
+        
+        .landing-cta-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .landing-secondary-button {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: hsl(207 64% 45%);
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: 0.875rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 8px 20px rgba(255, 255, 255, 0.25),
+                0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .landing-secondary-button:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 16px 32px rgba(255, 255, 255, 0.35),
+                0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Enhanced icon containers */
+        .icon-container {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 
+                0 8px 20px rgba(0, 0, 0, 0.15),
+                0 2px 8px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
         }
         
         /* Landing page specific animations */
@@ -46,20 +160,24 @@
         
         .animated-gradient {
             background: linear-gradient(-45deg, 
-                hsl(var(--primary)), 
-                hsl(var(--primary-light)), 
-                hsl(var(--success)), 
-                hsl(var(--accent)));
+                hsl(207 64% 45%), 
+                hsl(204 68% 64%), 
+                hsl(142 70% 45%), 
+                hsl(207 68% 68%));
             background-size: 400% 400%;
             animation: gradientShift 4s ease infinite;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            font-weight: 800;
         }
         
         .hero-section {
             min-height: 100vh;
-            background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-alt)) 100%);
+            background: linear-gradient(135deg, 
+                hsl(221 45% 96%) 0%, 
+                hsl(221 45% 94%) 50%,
+                hsl(221 45% 96%) 100%);
             position: relative;
         }
         
@@ -68,10 +186,49 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(circle at 20% 20%, hsla(var(--primary), 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, hsla(var(--success), 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 20%, hsla(207, 64%, 45%, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, hsla(142, 70%, 45%, 0.08) 0%, transparent 50%);
         }
         
+        /* Text contrast improvements */
+        .hero-title {
+            color: hsl(220 15% 15%);
+            font-weight: 800;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .hero-subtitle {
+            color: hsl(220 15% 25%);
+            font-weight: 500;
+        }
+        
+        .section-title {
+            color: hsl(220 15% 12%);
+            font-weight: 800;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .section-subtitle {
+            color: hsl(220 15% 30%);
+            font-weight: 500;
+        }
+        
+        .card-title {
+            color: hsl(220 15% 8%);
+            font-weight: 700;
+        }
+        
+        .card-text {
+            color: hsl(220 15% 30%);
+            font-weight: 500;
+        }
+        
+        .feature-list-item {
+            color: hsl(207 64% 38%);
+            font-weight: 600;
+        }
+        
+        /* Icon sizing */
         .icon {
             display: inline-block;
             width: 1.5rem;
@@ -81,35 +238,47 @@
         }
         
         .icon-lg {
-            width: 2.5rem;
-            height: 2.5rem;
-            line-height: 2.5rem;
-            font-size: 1.25rem;
+            font-size: 2rem;
+        }
+        
+        /* Badge styling */
+        .info-badge {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 
+                0 4px 12px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            color: hsl(220 15% 95%);
+            font-weight: 600;
         }
     </style>
 </head>
 <body class="bg-background text-foreground">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-morphism border-b border-border">
+    <nav class="fixed top-0 w-full z-50 landing-glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center space-x-3">
-                    <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-10 h-10 rounded-xl float-animation">
+                    <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-10 h-10 rounded-xl float-animation" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
                     <div class="font-bold text-xl animated-gradient">NUMA AI</div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="numa-nav-link">Features</a>
-                    <a href="#about" class="numa-nav-link">About</a>
-                    <a href="#contact" class="numa-nav-link">Contact</a>
+                    <a href="#features" class="text-foreground hover:text-numa-primary font-semibold transition-colors">Features</a>
+                    <a href="#about" class="text-foreground hover:text-numa-primary font-semibold transition-colors">About</a>
+                    <a href="#contact" class="text-foreground hover:text-numa-primary font-semibold transition-colors">Contact</a>
                 </div>
-                <button class="md:hidden text-foreground" onclick="toggleMenu()">☰</button>
+                <button class="md:hidden text-foreground text-2xl" onclick="toggleMenu()">☰</button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden glass-morphism border-t border-border">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-border/50" style="background: rgba(255, 255, 255, 0.98);">
             <div class="px-4 py-4 space-y-3">
-                <a href="#features" class="block numa-nav-link" onclick="toggleMenu()">Features</a>
-                <a href="#about" class="block numa-nav-link" onclick="toggleMenu()">About</a>
-                <a href="#contact" class="block numa-nav-link" onclick="toggleMenu()">Contact</a>
+                <a href="#features" class="block text-foreground hover:text-numa-primary font-semibold py-2 transition-colors" onclick="toggleMenu()">Features</a>
+                <a href="#about" class="block text-foreground hover:text-numa-primary font-semibold py-2 transition-colors" onclick="toggleMenu()">About</a>
+                <a href="#contact" class="block text-foreground hover:text-numa-primary font-semibold py-2 transition-colors" onclick="toggleMenu()">Contact</a>
             </div>
         </div>
     </nav>
@@ -118,18 +287,18 @@
     <section class="hero-section flex items-center pt-16">
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="text-center space-y-8">
-                <h1 class="text-5xl md:text-7xl font-bold">
+                <h1 class="text-5xl md:text-7xl font-bold hero-title">
                     <span class="animated-gradient">Care Smarter with</span>
                     <span class="block mt-4 animated-gradient">NUMA AI</span>
                 </h1>
-                <p class="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                <p class="text-xl md:text-2xl hero-subtitle max-w-3xl mx-auto leading-relaxed">
                     NUMA AI is your smart companion, helping nurses with training, patient care, and teamwork using voice technology.
                 </p>
                 <div class="pt-8">
-                    <a href="https://app.numa.ng" class="numa-button-primary text-lg">
-                        <span class="icon">⚡</span>
+                    <a href="https://app.numa.ng" class="landing-cta-button">
+                        <span class="icon text-xl">⚡</span>
                         Start Your Journey
-                        <span class="icon">→</span>
+                        <span class="icon text-xl">→</span>
                     </a>
                 </div>
             </div>
@@ -137,83 +306,83 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-background-alt">
+    <section id="features" class="py-24 bg-background-alt">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-6 mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold">
-                    <span class="text-foreground">Your All-in-One</span>
+            <div class="text-center space-y-6 mb-20">
+                <h2 class="text-4xl md:text-5xl section-title">
+                    Your All-in-One
                     <span class="block mt-2 animated-gradient">Nursing Solution</span>
                 </h2>
-                <p class="text-muted-foreground max-w-3xl mx-auto text-lg leading-relaxed">
+                <p class="section-subtitle max-w-3xl mx-auto text-xl leading-relaxed">
                     NUMA AI supports your career with smart tools for learning, care, and teamwork.
                 </p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="feature-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-numa-primary rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-soft">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="landing-feature-card p-10 text-center rounded-2xl">
+                    <div class="icon-container mx-auto mb-8" style="background: linear-gradient(135deg, hsl(207 64% 45%) 0%, hsl(207 64% 38%) 100%);">
                         <span class="icon-lg text-white">📚</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-foreground mb-4">Learn with Ease</h3>
-                    <p class="text-muted-foreground leading-relaxed mb-6">
+                    <h3 class="text-2xl card-title mb-4">Learn with Ease</h3>
+                    <p class="card-text leading-relaxed mb-8">
                         Access training with guided lessons and care tips to grow your skills.
                     </p>
-                    <div class="space-y-2 text-sm text-numa-primary">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-center space-x-2 feature-list-item">
+                            <span class="icon text-lg">✓</span>
                             <span>Guided Training</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2 feature-list-item">
+                            <span class="icon text-lg">✓</span>
                             <span>Drug Info</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2 feature-list-item">
+                            <span class="icon text-lg">✓</span>
                             <span>Care Tips</span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-soft">
+                <div class="landing-feature-card p-10 text-center rounded-2xl">
+                    <div class="icon-container mx-auto mb-8" style="background: linear-gradient(135deg, hsl(142 70% 38%) 0%, hsl(142 70% 32%) 100%);">
                         <span class="icon-lg text-white">👥</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-foreground mb-4">Manage Care</h3>
-                    <p class="text-muted-foreground leading-relaxed mb-6">
+                    <h3 class="text-2xl card-title mb-4">Manage Care</h3>
+                    <p class="card-text leading-relaxed mb-8">
                         Track patient details and get reminders with voice assistance.
                     </p>
-                    <div class="space-y-2 text-sm text-success">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(142 70% 32%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Patient Tracking</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(142 70% 32%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Drug Reminders</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(142 70% 32%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Voice Support</span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-card p-8 text-center">
-                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-soft">
+                <div class="landing-feature-card p-10 text-center rounded-2xl">
+                    <div class="icon-container mx-auto mb-8" style="background: linear-gradient(135deg, hsl(271 81% 48%) 0%, hsl(271 81% 42%) 100%);">
                         <span class="icon-lg text-white">🤝</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-foreground mb-4">Team Together</h3>
-                    <p class="text-muted-foreground leading-relaxed mb-6">
+                    <h3 class="text-2xl card-title mb-4">Team Together</h3>
+                    <p class="card-text leading-relaxed mb-8">
                         Coordinate shifts and share updates with your team.
                     </p>
-                    <div class="space-y-2 text-sm" style="color: hsl(271.5 81.3% 55.9%);">
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(271 81% 42%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Shift Planning</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(271 81% 42%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Team Updates</span>
                         </div>
-                        <div class="flex items-center justify-center space-x-2">
-                            <span class="icon">✓</span>
+                        <div class="flex items-center justify-center space-x-2" style="color: hsl(271 81% 42%); font-weight: 600;">
+                            <span class="icon text-lg">✓</span>
                             <span>Handover Support</span>
                         </div>
                     </div>
@@ -223,42 +392,42 @@
     </section>
 
     <!-- Why NUMA AI Section -->
-    <section class="py-20 bg-gradient-numa-primary text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/10"></div>
+    <section class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, hsl(207 64% 45%) 0%, hsl(207 64% 38%) 100%);">
+        <div class="absolute inset-0" style="background: rgba(0, 0, 0, 0.1);"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-8 mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold">
+            <div class="text-center space-y-8 mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" style="text-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                     Why Nurses Love NUMA AI
                 </h2>
-                <p class="text-blue-100 max-w-3xl mx-auto text-lg leading-relaxed">
+                <p class="text-white/95 max-w-3xl mx-auto text-xl leading-relaxed font-medium">
                     Built with insights from nurses across Africa to meet real needs.
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center space-y-6 glass-morphism-subtle p-8 rounded-2xl">
-                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
-                        <span class="icon-lg">📊</span>
+                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <span class="text-4xl">📊</span>
                     </div>
-                    <h3 class="text-2xl font-bold">Real Nurse Insights</h3>
-                    <p class="text-blue-100 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Real Nurse Insights</h3>
+                    <p class="text-white/90 leading-relaxed font-medium">
                         Shaped by nurses to solve daily challenges.
                     </p>
                 </div>
-                <div class="text-center space-y-6 glass-morphism-subtle p-8 rounded-2xl">
-                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
-                        <span class="icon-lg">🌍</span>
+                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <span class="text-4xl">🌍</span>
                     </div>
-                    <h3 class="text-2xl font-bold">Africa-Focused</h3>
-                    <p class="text-blue-100 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Africa-Focused</h3>
+                    <p class="text-white/90 leading-relaxed font-medium">
                         Tailored for African healthcare systems and nurses.
                     </p>
                 </div>
-                <div class="text-center space-y-6 glass-morphism-subtle p-8 rounded-2xl">
-                    <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto backdrop-blur-sm">
-                        <span class="icon-lg">❤️</span>
+                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <span class="text-4xl">❤️</span>
                     </div>
-                    <h3 class="text-2xl font-bold">Nurse-Led</h3>
-                    <p class="text-blue-100 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-white">Nurse-Led</h3>
+                    <p class="text-white/90 leading-relaxed font-medium">
                         Created by nurses who get your world.
                     </p>
                 </div>
@@ -267,50 +436,50 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-background-alt">
+    <section id="about" class="py-24 bg-background-alt">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
                     <div class="space-y-6">
-                        <h2 class="text-4xl md:text-5xl font-bold">
-                            <span class="text-foreground">About</span>
+                        <h2 class="text-4xl md:text-5xl section-title">
+                            About
                             <span class="block mt-2 animated-gradient">NUMA AI</span>
                         </h2>
-                        <p class="text-xl text-foreground leading-relaxed">
+                        <p class="text-xl card-title leading-relaxed">
                             NUMA AI, a product of <strong>NurseBridge Network</strong> in Nigeria, is transforming nursing with smart technology.
                         </p>
-                        <p class="text-muted-foreground leading-relaxed">
+                        <p class="card-text text-lg leading-relaxed">
                             Led by nurses, we're dedicated to easing your workload and improving care quality across Africa.
                         </p>
-                        <p class="text-muted-foreground leading-relaxed">
+                        <p class="card-text text-lg leading-relaxed">
                             Powered by the <strong>AFIX (Africa Future Innovation eXchange)</strong> initiative, supporting better lives in Africa.
                         </p>
                     </div>
-                    <div class="space-y-4">
+                    <div class="space-y-5">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
-                                <span class="text-white text-sm">✓</span>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background: linear-gradient(135deg, hsl(142 70% 38%) 0%, hsl(142 70% 32%) 100%); box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);">
+                                <span class="text-white text-base font-bold">✓</span>
                             </div>
-                            <span class="text-muted-foreground leading-relaxed">Smart training and care tools</span>
+                            <span class="card-text text-lg leading-relaxed">Smart training and care tools</span>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
-                                <span class="text-white text-sm">✓</span>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background: linear-gradient(135deg, hsl(142 70% 38%) 0%, hsl(142 70% 32%) 100%); box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);">
+                                <span class="text-white text-base font-bold">✓</span>
                             </div>
-                            <span class="text-muted-foreground leading-relaxed">Voice technology for hands-free use</span>
+                            <span class="card-text text-lg leading-relaxed">Voice technology for hands-free use</span>
                         </div>
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 shadow-md">
-                                <span class="text-white text-sm">✓</span>
+                            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background: linear-gradient(135deg, hsl(142 70% 38%) 0%, hsl(142 70% 32%) 100%); box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);">
+                                <span class="text-white text-base font-bold">✓</span>
                             </div>
-                            <span class="text-muted-foreground leading-relaxed">Teamwork made simple</span>
+                            <span class="card-text text-lg leading-relaxed">Teamwork made simple</span>
                         </div>
                     </div>
                 </div>
-                <div class="numa-card p-12 text-center min-h-96 flex items-center justify-center">
+                <div class="landing-feature-card p-12 text-center min-h-96 flex items-center justify-center rounded-2xl">
                     <div class="max-w-md">
-                        <h3 class="text-3xl font-bold mb-6 text-foreground">Supporting Nurses Across Africa</h3>
-                        <p class="text-muted-foreground leading-relaxed">NUMA AI is built for the unique needs of African nurses.</p>
+                        <h3 class="text-3xl font-bold mb-6 card-title">Supporting Nurses Across Africa</h3>
+                        <p class="card-text text-lg leading-relaxed">NUMA AI is built for the unique needs of African nurses.</p>
                     </div>
                 </div>
             </div>
@@ -318,28 +487,28 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-numa-primary text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/20"></div>
+    <section class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, hsl(207 64% 45%) 0%, hsl(207 64% 38%) 100%);">
+        <div class="absolute inset-0" style="background: rgba(0, 0, 0, 0.15);"></div>
         <div class="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="space-y-8">
-                <h3 class="text-4xl md:text-5xl font-bold">
+                <h3 class="text-4xl md:text-5xl font-bold text-white" style="text-shadow: 0 2px 8px rgba(0,0,0,0.15);">
                     Ready to Work Smarter?
-                    <span class="block mt-2 text-blue-100">Join NUMA AI Today</span>
+                    <span class="block mt-2 text-white/95">Join NUMA AI Today</span>
                 </h3>
-                <p class="text-blue-100 text-lg leading-relaxed max-w-2xl mx-auto">
+                <p class="text-white/95 text-xl leading-relaxed max-w-2xl mx-auto font-medium">
                     Start with free tools to ease your day and grow with our community.
                 </p>
             </div>
             <div class="pt-8">
-                <a href="https://app.numa.ng" class="inline-flex items-center gap-3 glass-morphism-subtle text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-xl hover:shadow-2xl hover:bg-white/30 transform hover:-translate-y-2 transition-all duration-300">
-                    <span class="icon">🚀</span>
+                <a href="https://app.numa.ng" class="landing-secondary-button">
+                    <span class="icon text-xl">🚀</span>
                     Get Started
-                    <span class="icon">→</span>
+                    <span class="icon text-xl">→</span>
                 </a>
             </div>
             <div class="pt-8 text-center">
-                <div class="inline-flex items-center space-x-2 text-blue-100 glass-morphism-subtle px-6 py-3 rounded-full">
-                    <span class="icon">🛡️</span>
+                <div class="info-badge inline-flex items-center space-x-2">
+                    <span class="icon text-lg">🛡️</span>
                     <span>Free to Start • No Card Needed</span>
                 </div>
             </div>
@@ -347,81 +516,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900"></div>
+    <section id="contact" class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, hsl(220 25% 10%) 0%, hsl(220 25% 8%) 100%);">
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                 <div class="space-y-6 lg:col-span-1">
                     <div class="flex items-center space-x-3 mb-6">
-                        <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-12 h-12 rounded-xl float-animation">
-                        <div class="font-bold text-2xl animated-gradient">NUMA AI</div>
-                    </div>
-                    <div class="space-y-4">
-                        <p class="text-slate-300 leading-relaxed text-sm">
-                            <strong>NUMA AI</strong><br>
-                            Your smart companion for nursing care and growth.
-                        </p>
-                        <p class="text-slate-300 text-sm">
-                            A product of <span class="text-blue-400 font-medium">NurseBridge Network</span>
-                        </p>
-                        <p class="text-slate-300 text-sm">An AFIX initiative</p>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="font-semibold text-lg text-white">Platform Features</h4>
-                    <div class="space-y-3 text-sm">
-                        <div class="text-slate-300">• Patient Care</div>
-                        <div class="text-slate-300">• Team Coordination</div>
-                        <div class="text-slate-300">• Voice Assistance</div>
-                        <div class="text-slate-300">• Training Hub</div>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="font-semibold text-lg text-white">Quick Links</h4>
-                    <div class="space-y-3 text-sm">
-                        <a href="#features" class="block text-slate-300 hover:text-blue-400 transition-colors">• Learn More</a>
-                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• Get Started</a>
-                        <a href="https://app.numa.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">• User Support</a>
-                        <a href="#contact" class="block text-slate-300 hover:text-blue-400 transition-colors">• Contact Us</a>
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h4 class="font-semibold text-lg text-white">Get in Touch</h4>
-                    <div class="space-y-3 text-sm">
-                        <a href="mailto:info@nursebridge.com.ng" class="block text-slate-300 hover:text-blue-400 transition-colors">
-                            <span class="icon">✉️</span> info@nursebridge.com.ng
-                        </a>
-                        <a href="tel:+2348162465247" class="block text-slate-300 hover:text-blue-400 transition-colors">
-                            <span class="icon">📞</span> +234 816 246 5247
-                        </a>
-                        <div class="text-slate-300">
-                            <span class="icon">📍</span> NurseBridge Network<br>
-                            <span class="ml-6">Lagos, Nigeria</span>
-                        </div>
-                    </div>
-                    <div class="pt-4">
-                        <div class="flex space-x-4">
-                            <a href="https://web.facebook.com/profile.php?id=61576980956427" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#1764c0] to-[#2d5384] hover:from-[#1a73d9] hover:to-[#3768a4] transition-all">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </a>
-                            <a href="https://www.instagram.com/nursebridge/" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#1764c0] to-[#2d5384] hover:from-[#1a73d9] hover:to-[#3768a4] transition-all">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                            </a>
-                            <a href="https://www.linkedin.com/showcase/nursebridge-network/" target="_blank" class="w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-br from-[#1764c0] to-[#2d5384] hover:from-[#1a73d9] hover:to-[#3768a4] transition-all">
-                                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
-</body>
-</html>
+                        <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-12 h-12 rounded-xl float-animation" style="box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                        <div class="
