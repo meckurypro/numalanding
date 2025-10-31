@@ -59,14 +59,14 @@
         }
         
         .landing-glass-card {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             box-shadow: 
-                0 12px 32px rgba(0, 0, 0, 0.12),
-                0 4px 12px rgba(0, 0, 0, 0.06),
-                inset 0 1px 2px rgba(255, 255, 255, 0.6);
+                0 12px 32px rgba(0, 0, 0, 0.15),
+                0 4px 12px rgba(0, 0, 0, 0.08),
+                inset 0 1px 2px rgba(255, 255, 255, 0.8);
         }
         
         /* Enhanced button styling */
@@ -97,23 +97,19 @@
             background: linear-gradient(135deg, hsl(207 64% 48%) 0%, hsl(207 64% 41%) 100%);
         }
         
-        .landing-cta-button:active {
-            transform: translateY(-1px);
-        }
-        
         .landing-secondary-button {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            color: hsl(207 64% 45%);
+            color: hsl(207 64% 38%);
             padding: 1rem 2.5rem;
             font-size: 1.125rem;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 0.875rem;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 
-                0 8px 20px rgba(255, 255, 255, 0.25),
-                0 2px 8px rgba(0, 0, 0, 0.08);
+                0 8px 20px rgba(255, 255, 255, 0.35),
+                0 2px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
@@ -121,11 +117,11 @@
         }
         
         .landing-secondary-button:hover {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 1);
             transform: translateY(-3px);
             box-shadow: 
-                0 16px 32px rgba(255, 255, 255, 0.35),
-                0 6px 16px rgba(0, 0, 0, 0.12);
+                0 16px 32px rgba(255, 255, 255, 0.45),
+                0 6px 16px rgba(0, 0, 0, 0.15);
         }
         
         /* Enhanced icon containers */
@@ -241,19 +237,40 @@
             font-size: 2rem;
         }
         
-        /* Badge styling */
+        /* Badge styling with better contrast */
         .info-badge {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 
-                0 4px 12px rgba(0, 0, 0, 0.08),
-                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+                0 4px 12px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
             padding: 0.75rem 1.5rem;
             border-radius: 2rem;
-            color: hsl(220 15% 95%);
-            font-weight: 600;
+            color: hsl(207 64% 38%);
+            font-weight: 700;
+        }
+        
+        /* Why NUMA section improved contrast */
+        .why-numa-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 
+                0 12px 32px rgba(0, 0, 0, 0.15),
+                0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .why-numa-title {
+            color: hsl(220 15% 8%);
+            font-weight: 700;
+        }
+        
+        .why-numa-text {
+            color: hsl(220 15% 20%);
+            font-weight: 500;
         }
     </style>
 </head>
@@ -404,30 +421,30 @@
                 </p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
-                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div class="text-center space-y-6 why-numa-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, hsl(207 64% 45%) 0%, hsl(207 64% 38%) 100%); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);">
                         <span class="text-4xl">📊</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Real Nurse Insights</h3>
-                    <p class="text-white/90 leading-relaxed font-medium">
+                    <h3 class="text-2xl why-numa-title">Real Nurse Insights</h3>
+                    <p class="why-numa-text leading-relaxed text-lg">
                         Shaped by nurses to solve daily challenges.
                     </p>
                 </div>
-                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
-                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div class="text-center space-y-6 why-numa-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, hsl(142 70% 38%) 0%, hsl(142 70% 32%) 100%); box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);">
                         <span class="text-4xl">🌍</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Africa-Focused</h3>
-                    <p class="text-white/90 leading-relaxed font-medium">
+                    <h3 class="text-2xl why-numa-title">Africa-Focused</h3>
+                    <p class="why-numa-text leading-relaxed text-lg">
                         Tailored for African healthcare systems and nurses.
                     </p>
                 </div>
-                <div class="text-center space-y-6 landing-glass-card p-10 rounded-2xl">
-                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: rgba(255, 255, 255, 0.25); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div class="text-center space-y-6 why-numa-card p-10 rounded-2xl">
+                    <div class="w-20 h-20 mx-auto rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, hsl(0 70% 50%) 0%, hsl(0 70% 45%) 100%); box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);">
                         <span class="text-4xl">❤️</span>
                     </div>
-                    <h3 class="text-2xl font-bold text-white">Nurse-Led</h3>
-                    <p class="text-white/90 leading-relaxed font-medium">
+                    <h3 class="text-2xl why-numa-title">Nurse-Led</h3>
+                    <p class="why-numa-text leading-relaxed text-lg">
                         Created by nurses who get your world.
                     </p>
                 </div>
@@ -514,12 +531,3 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, hsl(220 25% 10%) 0%, hsl(220 25% 8%) 100%);">
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                <div class="space-y-6 lg:col-span-1">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <img src="https://i.ibb.co/3mfB27TT/icon-512x512.png" alt="NUMA AI Logo" class="w-12 h-12 rounded-xl float-animation" style="box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                        <div class="
