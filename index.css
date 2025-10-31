@@ -1,0 +1,886 @@
+:root {
+  /* Safe area variables for mobile navbar extension */
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+
+  /* NUMA Brand Colors - Professional Blue Palette */
+  --numa-blue-light: 204 68% 64%;    /* #499cd7 - Primary brand */
+  --numa-blue-medium: 207 64% 45%;   /* #2973bb - Secondary brand */
+  --numa-blue-accent: 207 68% 68%;   /* #6cadde - Light accent */
+  --numa-blue-bg: 221 45% 95%;       /* #e7eef7 - Background tint */
+
+  /* Base Colors - Light Mode with Enhanced Contrast */
+  --background: 221 45% 96%;          /* Subtle blue-white background */
+  --background-alt: 221 45% 93%;      /* Alternate background for sections */
+  --foreground: 220 15% 8%;           /* Near black text - WCAG AAA */
+  
+  /* Card System - Modern Glassmorphism */
+  --card: 0 0% 100%;                  /* Pure white cards */
+  --card-foreground: 220 15% 8%;      /* Dark text on cards */
+  --card-hover: 221 30% 98%;          /* Subtle hover state */
+  
+  /* Primary Brand Colors */
+  --primary: 207 64% 45%;             /* NUMA Blue Medium - Better contrast */
+  --primary-foreground: 0 0% 100%;    /* White text on primary */
+  --primary-light: 204 68% 64%;       /* Lighter variant */
+  --primary-dark: 207 64% 35%;        /* Darker variant */
+  
+  /* Secondary Colors */
+  --secondary: 221 30% 90%;           /* Light blue-gray */
+  --secondary-foreground: 220 15% 15%; /* Dark text on secondary */
+  
+  /* Muted Colors */
+  --muted: 221 30% 88%;               /* Muted blue-gray */
+  --muted-foreground: 220 15% 35%;    /* Readable text on muted */
+  
+  /* Accent Colors */
+  --accent: 207 68% 68%;              /* Light NUMA accent */
+  --accent-foreground: 220 15% 8%;    /* Dark text on accent */
+  
+  /* Status Colors - High Contrast for Light Mode */
+  --destructive: 0 70% 50%;           /* Red */
+  --destructive-foreground: 0 0% 100%; /* White text */
+  --success: 142 70% 35%;             /* Green */
+  --success-foreground: 0 0% 100%;    /* White text */
+  --warning: 38 85% 45%;              /* Orange */
+  --warning-foreground: 0 0% 5%;      /* Dark text */
+  
+  /* FIXED: Performance Result Colors for Light Mode - VERY DARK FOR WHITE TEXT */
+  --performance-success: 142 80% 20%; /* Very dark green */
+  --performance-success-foreground: 0 0% 100%;
+  --performance-error: 0 85% 25%;     /* Very dark red */
+  --performance-error-foreground: 0 0% 100%;
+  
+  /* Healthcare-specific Colors */
+  --emergency: 0 70% 50%;             /* Emergency red */
+  --emergency-foreground: 0 0% 100%;  /* White text */
+  --vital-normal: 142 70% 45%;        /* Normal vitals - green */
+  --vital-warning: 38 85% 45%;        /* Warning vitals - orange */
+  --vital-critical: 0 70% 50%;        /* Critical vitals - red */
+  --medication-due: 38 85% 45%;       /* Medication due - orange */
+  --medication-overdue: 0 70% 50%;    /* Medication overdue - red */
+  
+  /* UI Elements */
+  --border: 221 20% 82%;              /* Subtle borders */
+  --input: 0 0% 100%;                 /* White input backgrounds */
+  --ring: 207 64% 45%;                /* Focus ring color */
+  --radius: 0.75rem;                  /* Standard border radius */
+  
+  /* Popover */
+  --popover: 0 0% 100%;               /* White popovers */
+  --popover-foreground: 220 15% 8%;   /* Dark text in popovers */
+  
+  /* Sidebar Colors */
+  --sidebar-background: 221 30% 95%;  /* Light sidebar background */
+  --sidebar-foreground: 220 15% 15%;  /* Dark text in sidebar */
+  --sidebar-primary: 207 64% 45%;     /* Primary sidebar color */
+  --sidebar-primary-foreground: 0 0% 100%; /* White text on primary */
+  --sidebar-accent: 221 30% 88%;      /* Accent sidebar color */
+  --sidebar-accent-foreground: 220 15% 15%; /* Dark text on accent */
+  --sidebar-border: 221 20% 82%;      /* Sidebar borders */
+  --sidebar-ring: 207 64% 45%;        /* Sidebar focus ring */
+
+  /* Modern Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 50%, hsl(var(--primary-dark)) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary-light)) 100%);
+  
+  /* Glassmorphism Effects */
+  --glass-background: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  
+  /* Mobile navbar theme colors */
+  --navbar-light: hsl(0 0% 100%);
+  --navbar-dark: hsl(220 25% 12%);
+}
+
+.dark {
+  /* Dark backgrounds with proper contrast */
+  --background: 220 25% 6%;           /* Very dark navy */
+  --background-alt: 220 25% 8%;       /* Alternate dark background */
+  --foreground: 220 15% 95%;          /* Near white text */
+  
+  /* Dark mode cards with glassmorphism */
+  --card: 220 25% 10%;                /* Dark blue cards */
+  --card-foreground: 220 15% 95%;     /* Light text on cards */
+  --card-hover: 220 25% 12%;          /* Hover state for cards */
+  
+  /* Primary colors adjusted for dark mode */
+  --primary: 204 68% 64%;             /* Lighter primary for visibility */
+  --primary-foreground: 220 25% 6%;   /* Dark text on primary */
+  --primary-light: 207 68% 75%;       /* Even lighter variant */
+  --primary-dark: 204 68% 50%;        /* Darker variant */
+  
+  /* Secondary colors for dark mode */
+  --secondary: 220 20% 15%;           /* Dark secondary */
+  --secondary-foreground: 220 15% 85%; /* Light text on secondary */
+  
+  /* Muted colors for dark mode */
+  --muted: 220 20% 12%;               /* Dark muted */
+  --muted-foreground: 220 15% 70%;    /* Light text on muted */
+  
+  /* Accent colors for dark mode */
+  --accent: 207 68% 68%;              /* Light accent for dark mode */
+  --accent-foreground: 220 25% 6%;    /* Dark text on accent */
+  
+  /* Status colors for dark mode */
+  --destructive: 0 65% 58%;           /* Lighter red for dark mode */
+  --destructive-foreground: 220 25% 6%; /* Dark text */
+  --success: 142 70% 55%;             /* Lighter green */
+  --success-foreground: 220 25% 6%;   /* Dark text */
+  --warning: 38 80% 60%;              /* Lighter orange */
+  --warning-foreground: 220 25% 6%;   /* Dark text */
+  
+  /* FIXED: Performance Result Colors for Dark Mode - EVEN DARKER FOR WHITE TEXT */
+  --performance-success: 142 90% 15%; /* Extremely dark green for dark mode */
+  --performance-success-foreground: 0 0% 100%;
+  --performance-error: 0 90% 20%;     /* Extremely dark red for dark mode */
+  --performance-error-foreground: 0 0% 100%;
+  
+  /* Healthcare colors for dark mode */
+  --emergency: 0 65% 58%;             /* Lighter emergency red */
+  --emergency-foreground: 220 25% 6%; /* Dark text */
+  --vital-normal: 142 70% 55%;        /* Lighter green for vitals */
+  --vital-warning: 38 80% 60%;        /* Lighter orange for vitals */
+  --vital-critical: 0 65% 58%;        /* Lighter red for vitals */
+  --medication-due: 38 80% 60%;       /* Lighter orange for medications */
+  --medication-overdue: 0 65% 58%;    /* Lighter red for medications */
+  
+  /* UI elements for dark mode */
+  --border: 220 20% 18%;              /* Dark borders */
+  --input: 220 25% 12%;               /* Dark input backgrounds */
+  --ring: 204 68% 64%;                /* Light focus ring */
+  
+  /* Popover for dark mode */
+  --popover: 220 25% 10%;             /* Dark popover */
+  --popover-foreground: 220 15% 95%;  /* Light text */
+  
+  /* Sidebar for dark mode */
+  --sidebar-background: 220 25% 8%;   /* Dark sidebar */
+  --sidebar-foreground: 220 15% 85%;  /* Light text */
+  --sidebar-primary: 204 68% 64%;     /* Light primary */
+  --sidebar-primary-foreground: 220 25% 6%; /* Dark text on primary */
+  --sidebar-accent: 220 20% 12%;      /* Dark accent */
+  --sidebar-accent-foreground: 220 15% 85%; /* Light text on accent */
+  --sidebar-border: 220 20% 18%;      /* Dark borders */
+  --sidebar-ring: 204 68% 64%;        /* Light focus ring */
+
+  /* Dark mode gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--primary-light)) 0%, hsl(var(--primary)) 50%, hsl(var(--primary-dark)) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--primary-light)) 100%);
+  
+  /* Dark mode glassmorphism */
+  --glass-background: rgba(20, 25, 40, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  
+  /* Dark mode navbar */
+  --navbar-light: hsl(220 25% 10%);
+  --navbar-dark: hsl(220 25% 8%);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NUMA Healthcare Platform - Enhanced Design System with Fixed Dark Mode Contrast */
+
+@layer base {
+  /* Modern Card System */
+  .numa-card {
+    @apply bg-card/90 text-card-foreground rounded-xl border border-border/50 shadow-lg;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transition: transform, box-shadow, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .numa-card:hover {
+    @apply shadow-xl;
+    transform: translateY(-2px);
+    background-color: hsl(var(--card-hover) / 0.95);
+  }
+
+  .numa-card-glass {
+    background: var(--glass-background);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  @supports not (backdrop-filter: blur(16px)) {
+    .numa-card-glass {
+      background: rgba(255, 255, 255, 0.9); /* Fallback for unsupported browsers */
+    }
+  }
+
+  /* Modern Button System */
+  .numa-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary-dark;
+    @apply rounded-lg px-6 py-3 font-medium;
+    transition: transform, box-shadow, background-color 0.2s ease;
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+  }
+
+  .numa-button-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px hsl(var(--primary) / 0.4);
+  }
+
+  .numa-button-primary:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  .numa-button-secondary {
+    @apply bg-secondary/80 text-secondary-foreground hover:bg-secondary;
+    @apply rounded-lg px-6 py-3 font-medium;
+    transition: transform, background-color 0.2s ease;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .numa-button-outline {
+    @apply text-primary bg-transparent border-2 border-primary hover:bg-primary hover:text-primary-foreground;
+    @apply rounded-lg px-6 py-3 font-medium;
+    transition: background-color, color 0.2s ease;
+  }
+
+  .numa-button-glass {
+    background: var(--glass-background);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    @apply text-foreground hover:bg-muted/20;
+    transition: background-color 0.3s ease;
+  }
+
+  @supports not (backdrop-filter: blur(12px)) {
+    .numa-button-glass {
+      background: rgba(255, 255, 255, 0.9); /* Fallback */
+    }
+  }
+
+  /* Consolidated Performance Result Components */
+  .result-success {
+    background-color: rgb(22 101 52);
+    color: rgb(255 255 255);
+    border: 1px solid rgb(22 101 52);
+    font-weight: 600;
+  }
+
+  .result-error {
+    background-color: rgb(153 27 27);
+    color: rgb(255 255 255);
+    border: 1px solid rgb(153 27 27);
+    font-weight: 600;
+  }
+
+  .dark .result-success {
+    background-color: rgb(15 70 35);
+    color: rgb(255 255 255);
+  }
+
+  .dark .result-error {
+    background-color: rgb(120 20 20);
+    color: rgb(255 255 255);
+  }
+
+  /* Enhanced Badge System */
+  .numa-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .numa-badge-primary {
+    @apply bg-primary/20 text-primary border border-primary/30;
+  }
+
+  .numa-badge-success {
+    @apply bg-success/20 text-success border border-success/30;
+  }
+
+  .numa-badge-warning {
+    @apply bg-warning/20 text-warning border border-warning/30;
+  }
+
+  .numa-badge-destructive {
+    @apply bg-destructive/20 text-destructive border border-destructive/30;
+  }
+
+  /* Modern Navigation */
+  .numa-nav-link {
+    @apply text-muted-foreground hover:text-foreground;
+    @apply px-4 py-2 rounded-lg;
+    position: relative;
+    transition: background-color, color 0.2s ease;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .numa-nav-link:hover {
+    @apply bg-muted/30;
+    transform: translateY(-1px);
+  }
+
+  .numa-nav-link:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  .numa-nav-link.active {
+    @apply text-primary bg-primary/10 border border-primary/20;
+  }
+
+  /* Enhanced Tab System */
+  .numa-tab {
+    @apply px-4 py-2 rounded-lg font-medium;
+    @apply text-muted-foreground hover:text-foreground;
+    transition: background-color, color, box-shadow 0.2s ease;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .numa-tab.active {
+    @apply text-primary bg-primary/10 border border-primary/20;
+    box-shadow: 0 2px 8px hsl(var(--primary) / 0.2);
+  }
+
+  /* Modern Form Elements */
+  .form-input {
+    @apply bg-input/90 border-2 border-border rounded-lg px-4 py-3;
+    @apply text-foreground placeholder:text-muted-foreground;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition: border-color, transform, box-shadow 0.2s ease;
+  }
+
+  .form-input:focus {
+    @apply border-ring ring-2 ring-ring/20;
+    transform: translateY(-1px);
+  }
+
+  .form-select {
+    @apply bg-input/90 border-2 border-border rounded-lg px-4 py-3;
+    @apply text-foreground;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .form-textarea {
+    @apply bg-input/90 border-2 border-border rounded-lg px-4 py-3;
+    @apply text-foreground placeholder:text-muted-foreground resize-none;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    min-height: 120px;
+  }
+
+  /* Modern Table System */
+  .numa-table {
+    @apply w-full bg-card/90 rounded-xl overflow-hidden;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .numa-table th {
+    @apply bg-muted/50 text-muted-foreground font-semibold text-left px-6 py-4;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+  .numa-table td {
+    @apply text-foreground px-6 py-4 border-b border-border/30;
+  }
+
+  .numa-table tr:hover {
+    @apply bg-muted/20;
+  }
+
+  /* Loading Animations */
+  .loading-spinner {
+    @apply inline-block w-6 h-6 border-2 border-primary/30 border-t-primary rounded-full;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Modern Alert System */
+  .numa-alert {
+    @apply p-4 rounded-xl border backdrop-blur-sm;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .numa-alert-info {
+    @apply bg-primary/10 border-primary/30 text-primary;
+  }
+
+  .numa-alert-success {
+    @apply bg-success/10 border-success/30 text-success;
+  }
+
+  .numa-alert-warning {
+    @apply bg-warning/10 border-warning/30 text-warning;
+  }
+
+  .numa-alert-destructive {
+    @apply bg-destructive/10 border-destructive/30 text-destructive;
+  }
+
+  /* Mobile navbar extensions */
+  .mobile-header-extended {
+    position: relative;
+    margin-top: calc(-1 * env(safe-area-inset-top));
+    padding-top: calc(env(safe-area-inset-top) + 1rem);
+  }
+
+  .mobile-header-extended::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top);
+    background: inherit;
+    z-index: -1;
+  }
+
+  .mobile-navbar-extended {
+    position: relative;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .mobile-navbar-extended::after {
+    content: '';
+    position: absolute;
+    bottom: calc(-1 * env(safe-area-inset-bottom));
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-bottom);
+    background: inherit;
+    -webkit-backdrop-filter: inherit;
+    backdrop-filter: inherit;
+    z-index: -1;
+  }
+
+  /* Theme-specific navbar backgrounds */
+  .mobile-header-light {
+    background: #FFFFFF;
+  }
+
+  .mobile-header-dark {
+    background: #1a1f2e;
+  }
+
+  .mobile-navbar-light {
+    background: #FFFFFF;
+  }
+
+  .mobile-navbar-dark {
+    background: #1a1f2e;
+  }
+
+  /* Feature cards */
+  .feature-card {
+    @apply bg-card text-card-foreground rounded-xl border-2 border-border/30;
+    background: hsl(var(--card));
+    box-shadow: 
+      0 8px 24px rgba(0, 0, 0, 0.08),
+      0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform, box-shadow, border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: 
+      0 20px 50px hsla(var(--primary), 0.15),
+      0 12px 28px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Accessibility Enhancements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .numa-card {
+      @apply border-2 border-foreground;
+    }
+    
+    .numa-button-primary {
+      @apply border-2 border-foreground;
+    }
+  }
+
+  /* Print Styles */
+  @media print {
+    .numa-card {
+      @apply shadow-none border-2 border-foreground;
+      backdrop-filter: none;
+    }
+    
+    body {
+      @apply bg-white text-black;
+    }
+  }
+
+  /* Skip Link for Accessibility */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4;
+    @apply bg-primary text-primary-foreground px-4 py-2 rounded-lg;
+    @apply z-50 font-medium;
+  }
+
+  /* Error States */
+  .error-state {
+    @apply border-destructive ring-2 ring-destructive/20;
+  }
+
+  .success-state {
+    @apply border-success ring-2 ring-success/20;
+  }
+
+  /* Modern Glassmorphism Effects */
+  .glass-morphism {
+    background: var(--glass-background);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-morphism-subtle {
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Modern Gradient Backgrounds */
+  .gradient-primary-bg {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary-bg {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-accent-bg {
+    background: var(--gradient-accent);
+  }
+
+  /* Floating Action Button */
+  .numa-fab {
+    @apply fixed bottom-6 right-6 w-14 h-14 bg-primary text-primary-foreground;
+    @apply rounded-full shadow-xl hover:shadow-2xl;
+    @apply flex items-center justify-center;
+    transition: transform, box-shadow 0.2s ease;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    z-index: 40;
+  }
+
+  .numa-fab:hover {
+    transform: translateY(-2px) scale(1.05);
+  }
+
+  /* Base element styling */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100vh;
+  }
+
+  /* Enhanced Typography with Better Contrast */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground font-semibold;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-3xl md:text-4xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  h4 { @apply text-lg md:text-xl; }
+
+  /* Body text with proper contrast */
+  p, li, span, div {
+    @apply text-foreground;
+    line-height: 1.6;
+  }
+
+  /* Modern Form Elements with Glassmorphism */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    @apply bg-input text-foreground border-2 border-border rounded-lg;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: border-color, box-shadow, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  select:focus {
+    @apply border-ring ring-2 ring-ring/20;
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 
+      inset 0 1px 3px rgba(0, 0, 0, 0.1),
+      0 4px 12px rgba(0, 0, 0, 0.1),
+      0 0 0 2px hsl(var(--ring) / 0.2);
+  }
+
+  /* Modern Label styling */
+  label {
+    @apply text-foreground font-medium text-sm;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* Enhanced Link styling */
+  a {
+    @apply text-primary hover:text-primary-dark;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--primary));
+    text-underline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  /* Safe area utilities */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+
+  /* High contrast text utilities */
+  .text-high-contrast {
+    @apply text-foreground;
+  }
+
+  .text-medium-contrast {
+    @apply text-muted-foreground;
+  }
+
+  /* NUMA brand text utilities */
+  .text-numa-primary {
+    color: hsl(var(--primary));
+  }
+
+  .text-numa-secondary {
+    color: hsl(var(--secondary));
+  }
+
+  .text-numa-accent {
+    color: hsl(var(--accent));
+  }
+
+  /* Professional typography */
+  .professional-compact {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    @apply text-foreground;
+  }
+
+  .professional-list-item {
+    padding: 12px 16px;
+    min-height: 48px;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    @apply text-foreground;
+  }
+
+  .professional-text-sm {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    @apply text-muted-foreground;
+  }
+
+  .professional-text-lg {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    @apply text-foreground;
+  }
+
+  /* Enhanced shadow utilities */
+  .shadow-soft {
+    box-shadow: 
+      0 6px 20px hsla(var(--primary), 0.15),
+      0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-medium {
+    box-shadow: 
+      0 12px 32px hsla(var(--primary), 0.2),
+      0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .shadow-strong {
+    box-shadow: 
+      0 20px 50px hsla(var(--primary), 0.25),
+      0 12px 28px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-inset {
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  /* NUMA gradient utilities */
+  .bg-gradient-numa-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-numa-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .bg-gradient-numa-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Improved glass effects */
+  .glass {
+    @apply backdrop-blur-lg border-2 text-foreground;
+    background: hsla(var(--background), 0.85);
+    border-color: hsl(var(--border));
+    box-shadow: 
+      0 8px 24px rgba(0, 0, 0, 0.1),
+      0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark .glass {
+    background: hsla(var(--background), 0.9);
+    border-color: hsl(var(--border));
+  }
+
+  /* Interactive states with accessibility in mind */
+  .interactive-lift {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .interactive-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  .interactive-lift:active {
+    transform: translateY(0);
+  }
+
+  /* Focus indicators for accessibility */
+  .focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+
+  /* Alert/notification styles */
+  .alert-info {
+    @apply border-primary/30 bg-card text-card-foreground;
+    background: linear-gradient(145deg, 
+      hsla(var(--primary), 0.05) 0%, 
+      hsl(var(--card)) 100%);
+    border-left: 4px solid hsl(var(--primary));
+  }
+
+  .alert-warning {
+    @apply border-warning/30 bg-card text-card-foreground;
+    background: linear-gradient(145deg, 
+      hsla(var(--warning), 0.05) 0%, 
+      hsl(var(--card)) 100%);
+    border-left: 4px solid hsl(var(--warning));
+  }
+
+  .alert-error {
+    @apply border-destructive/30 bg-card text-card-foreground;
+    background: linear-gradient(145deg, 
+      hsla(var(--destructive), 0.05) 0%, 
+      hsl(var(--card)) 100%);
+    border-left: 4px solid hsl(var(--destructive));
+  }
+
+  .alert-success {
+    @apply border-success/30 bg-card text-card-foreground;
+    background: linear-gradient(145deg, 
+      hsla(var(--success), 0.05) 0%, 
+      hsl(var(--card)) 100%);
+    border-left: 4px solid hsl(var(--success));
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --foreground: 0 0% 0%;           /* Pure black text */
+      --muted-foreground: 0 0% 20%;    /* Dark gray */
+      --border: 0 0% 40%;              /* Darker borders */
+    }
+
+    .dark {
+      --foreground: 0 0% 100%;         /* Pure white text */
+      --muted-foreground: 0 0% 80%;    /* Light gray */
+      --border: 0 0% 60%;              /* Lighter borders */
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
